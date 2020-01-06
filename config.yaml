@@ -1,0 +1,21 @@
+bitextor: /opt/bitextor
+permanentDir: /home/bitextor/permanent
+transientDir: /home/bitextor/transient
+lang1: en
+lang2: sv
+crawler: httrack
+# crawlTimeLimit: 1000s
+crawlSizeLimit: 10G
+LANG2Tokenizer: '/opt/bitextor/preprocess/moses/tokenizer/tokenizer.perl -q -b -a -l fr'
+LANG1Tokenizer: '/opt/bitextor/preprocess/moses/tokenizer/tokenizer.perl -q -b -a -l en'
+LANG2SentenceSplitter: '/opt/bitextor/preprocess/moses/ems/support/split-sentences.perl -q -b -l fr'
+LANG1SentenceSplitter: '/opt/bitextor/preprocess/moses/ems/support/split-sentences.perl -q -b -l en'
+# dic: '/home/bitextor/en-sv.dic'
+dic: '/home/bitextor/en-sv_clean'
+# bicleaner: /home/bitextor/en-sv/training.en-sv.yaml
+# bicleanerThreshold: 0.6
+initCorpusTrainPrefix: ['/home/bitextor/en-sv/para_small']
+# bicleanerCorpusTrainingPrefix: ['/home/bitextor/en-sv/para_small']
+# initCorpusTrainPrefix: [""]
+# bicleanerCorpusTrainingPrefix: [""]
+hosts: ["bikester.co.uk", "bikester.se"]
